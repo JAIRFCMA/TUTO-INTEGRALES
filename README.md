@@ -20,8 +20,3 @@ Repositorio educativo completo sobre cálculo integral que incluye:
 | 🧊 Triples | Cilíndricas, esféricas, aplicaciones físicas | Avanzado |
 | 🎯 Ejercicios | Problemas resueltos con explicación detallada | Todos los niveles |
 
-## 🚀 Instalación Rápida
-
-1. Clonar repositorio:
-```bash
-git clone https://github.com/tu-usuario/integrales-tutorial.git && cd integrales-tutorial
