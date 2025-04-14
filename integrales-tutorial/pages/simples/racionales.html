@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrales Racionales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .method-card {
+            border-left: 4px solid #f39c12;
+            transition: all 0.3s;
+        }
+        .method-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .case-card {
+            background-color: #fff4e6;
+            border-radius: 8px;
+        }
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Simples</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Racionales</li>
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-warning text-white p-4 p-md-5 rounded-3 mb-4">
+            <h1 class="display-4 fw-bold"><i class="fas fa-divide me-2"></i>Integrales de Funciones Racionales</h1>
+            <p class="lead">Método de fracciones parciales para integrar cocientes de polinomios</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-cogs text-warning me-2"></i>Método de Fracciones Parciales</h2>
+                        
+                        <div class="highlight-box mb-4">
+                            <h5 class="text-info"><i class="fas fa-info-circle me-2"></i>Pasos generales:</h5>
+                            <ol>
+                                <li>Verificar si el grado del numerador es mayor o igual al denominador (división polinomial)</li>
+                                <li>Factorizar completamente el denominador</li>
+                                <li>Descomponer en fracciones simples</li>
+                                <li>Determinar los coeficientes</li>
+                                <li>Integrar cada término por separado</li>
+                            </ol>
+                        </div>
+                        
+                        <h3 class="mt-4"><i class="fas fa-project-diagram text-primary me-2"></i>Casos de Factores</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Factores Lineales Distintos</h5>
+                                        <p>\( \frac{P(x)}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Factores Lineales Repetidos</h5>
+                                        <p>\( \frac{P(x)}{(x-a)^n} = \frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_n}{(x-a)^n} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Factores Cuadráticos Irreducibles</h5>
+                                        <p>\( \frac{P(x)}{(ax^2+bx+c)} = \frac{Ax+B}{ax^2+bx+c} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Factores Cuadráticos Repetidos</h5>
+                                        <p>\( \frac{P(x)}{(ax^2+bx+c)^n} = \frac{A_1x+B_1}{ax^2+bx+c} + \cdots + \frac{A_nx+B_n}{(ax^2+bx+c)^n} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-success me-2"></i>Ejemplo Resuelto</h2>
+                        
+                        <div class="card case-card">
+                            <div class="card-body">
+                                <h5 class="card-title">\( \int \frac{2x+3}{(x-1)(x+2)} dx \)</h5>
+                                <p>1. Descomponemos: \( \frac{2x+3}{(x-1)(x+2)} = \frac{A}{x-1} + \frac{B}{x+2} \)</p>
+                                <p>2. Encontramos A y B: \( 2x+3 = A(x+2) + B(x-1) \)</p>
+                                <p>3. Resolviendo: \( A = \frac{5}{3}, B = \frac{1}{3} \)</p>
+                                <p>4. Integramos: \( \frac{5}{3} \ln|x-1| + \frac{1}{3} \ln|x+2| + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-info me-2"></i>Consejos Prácticos</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Siempre verificar primero si se puede simplificar</li>
+                            <li class="list-group-item">Para encontrar coeficientes, usar valores estratégicos de x</li>
+                            <li class="list-group-item">Recordar que \( \int \frac{1}{x} dx = \ln|x| + C \)</li>
+                            <li class="list-group-item">Para términos cuadráticos, completar el cuadrado si es necesario</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Errores Comunes</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">No verificar el grado del numerador</li>
+                            <li class="list-group-item">Factorización incorrecta del denominador</li>
+                            <li class="list-group-item">Olvidar el valor absoluto en los logaritmos</li>
+                            <li class="list-group-item">Confundir los casos de descomposición</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-primary me-2"></i>Recursos Adicionales</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Video tutorial paso a paso</a>
+                            <a href="#" class="list-group-item list-group-item-action">Ejercicios con soluciones</a>
+                            <a href="#" class="list-group-item list-group-item-action">Calculadora de fracciones parciales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos Prácticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-practicos {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-practicos::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .practico-card {
+            border-left: 4px solid #f39c12;
+            transition: all 0.3s;
+        }
+        .practico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .difficulty-badge {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Triples</a></li>
+                <li class="breadcrumb-item active">Casos Prácticos</li>
+            </ol>
+        </nav>
+
+        <div class="hero-practicos text-white p-5 mb-5 rounded-3">
+            <h1 class="display-4 fw-bold"><i class="fas fa-laptop-code me-3"></i>Casos Prácticos</h1>
+            <p class="lead">Problemas resueltos de integrales triples</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card practico-card mb-4">
+                    <div class="card-body">
+                        <span class="badge bg-success difficulty-badge mb-2">Básico</span>
+                        <h3>Volumen de un Cubo</h3>
+                        <p>Calcular el volumen del cubo \( [0,a] \times [0,a] \times [0,a] \):</p>
+                        <p>\[ V = \int_0^a \int_0^a \int_0^a dz \, dy \, dx = a^3 \]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card practico-card mb-4">
+                    <div class="card-body">
+                        <span class="badge bg-warning difficulty-badge mb-2">Intermedio</span>
+                        <h3>Masa de un Cono</h3>
+                        <p>Cono de altura h y radio R con densidad \( \rho(x,y,z) = kz \):</p>
+                        <p>Usar coordenadas cilíndricas para calcular la masa total.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card practico-card mb-4">
+                    <div class="card-body">
+                        <span class="badge bg-danger difficulty-badge mb-2">Avanzado</span>
+                        <h3>Momento de Inercia</h3>
+                        <p>Calcular el momento de inercia de una esfera sólida de radio R y densidad constante \( \rho_0 \) respecto a un diámetro:</p>
+                        <p>\[ I_z = \iiint_E (x^2 + y^2) \rho_0 \, dV \]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card practico-card mb-4">
+                    <div class="card-body">
+                        <span class="badge bg-purple difficulty-badge mb-2">Desafío</span>
+                        <h3>Región Compleja</h3>
+                        <p>Calcular el volumen limitado por \( z = x^2 + y^2 \) y \( z = 4 - x^2 - y^2 \).</p>
+                        <p>Sugerencia: Usar coordenadas cilíndricas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-warning">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Triples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración por Partes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .formula-highlight {
+            background-color: #f3e5ff;
+            border-left: 4px solid #9b59b6;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .step-card {
+            border-left: 4px solid #3498db;
+            transition: all 0.3s;
+        }
+        .step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .example-card {
+            background-color: #e8f4f8;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Simples</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Por Partes</li>
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-purple text-white p-4 p-md-5 rounded-3 mb-4">
+            <h1 class="display-4 fw-bold"><i class="fas fa-puzzle-piece me-2"></i>Integración por Partes</h1>
+            <p class="lead">Método para integrar productos de funciones basado en la regla del producto</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-square-root-alt text-purple me-2"></i>Fórmula Fundamental</h2>
+                        <div class="formula-highlight mb-4">
+                            <p class="display-6 text-center">\[ \int u \, dv = uv - \int v \, du \]</p>
+                        </div>
+                        
+                        <h3 class="mt-4"><i class="fas fa-list-ol text-primary me-2"></i>Procedimiento</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card step-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1. Identificar u y dv</h5>
+                                        <p>Seleccionar qué parte será u (para derivar) y qué parte será dv (para integrar)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card step-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Calcular du y v</h5>
+                                        <p>Derivar u para obtener du e integrar dv para obtener v</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card step-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Aplicar la fórmula</h5>
+                                        <p>Sustituir en la fórmula \( uv - \int v \, du \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card step-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Resolver la nueva integral</h5>
+                                        <p>Si es necesario, aplicar el método nuevamente</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-warning me-2"></i>Ejemplos Resueltos</h2>
+                        
+                        <div class="card example-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 1: \( \int x e^x \, dx \)</h5>
+                                <p>1. Elegimos: \( u = x \) ⇒ \( du = dx \)</p>
+                                <p>2. \( dv = e^x dx \) ⇒ \( v = e^x \)</p>
+                                <p>3. Aplicamos la fórmula: \( xe^x - \int e^x dx = xe^x - e^x + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card example-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 2: \( \int x \sin x \, dx \)</h5>
+                                <p>1. Elegimos: \( u = x \) ⇒ \( du = dx \)</p>
+                                <p>2. \( dv = \sin x dx \) ⇒ \( v = -\cos x \)</p>
+                                <p>3. Aplicamos la fórmula: \( -x\cos x + \int \cos x dx = -x\cos x + \sin x + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-success me-2"></i>Regla LIATE</h3>
+                        <p>Orden de preferencia para elegir u:</p>
+                        <ol>
+                            <li><strong>L</strong>ogarítmicas</li>
+                            <li><strong>I</strong>nversas trigonométricas</li>
+                            <li><strong>A</strong>lgebraicas (polinomios)</li>
+                            <li><strong>T</strong>rigonométricas</li>
+                            <li><strong>E</strong>xponenciales</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Errores Comunes</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Elegir mal u y dv</li>
+                            <li class="list-group-item">Olvidar el signo menos</li>
+                            <li class="list-group-item">No simplificar la nueva integral</li>
+                            <li class="list-group-item">Integrar incorrectamente v</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-info me-2"></i>Recursos</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Video explicativo</a>
+                            <a href="#" class="list-group-item list-group-item-action">Ejercicios propuestos</a>
+                            <a href="#" class="list-group-item list-group-item-action">Problemas resueltos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

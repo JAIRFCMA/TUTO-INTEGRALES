@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicaciones Físicas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-aplicaciones {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-aplicaciones::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .aplicacion-card {
+            border-left: 4px solid #e74c3c;
+            transition: all 0.3s;
+        }
+        .aplicacion-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Triples</a></li>
+                <li class="breadcrumb-item active">Aplicaciones Físicas</li>
+            </ol>
+        </nav>
+
+        <div class="hero-aplicaciones text-white p-5 mb-5 rounded-3">
+            <h1 class="display-4 fw-bold"><i class="fas fa-atom me-3"></i>Aplicaciones Físicas</h1>
+            <p class="lead">Uso de integrales triples en problemas físicos</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card aplicacion-card mb-4">
+                    <div class="card-body">
+                        <h2><i class="fas fa-weight text-danger me-2"></i>Masa y Densidad</h2>
+                        <p>Para un sólido con densidad \( \rho(x,y,z) \):</p>
+                        <p class="text-center">\[ M = \iiint_E \rho(x,y,z) \, dV \]</p>
+                        <p>Donde \( M \) es la masa total del sólido \( E \).</p>
+                    </div>
+                </div>
+
+                <div class="card aplicacion-card mb-4">
+                    <div class="card-body">
+                        <h2><i class="fas fa-balance-scale text-danger me-2"></i>Centro de Masa</h2>
+                        <p>Coordenadas del centro de masa:</p>
+                        <p class="text-center">\[ \bar{x} = \frac{1}{M} \iiint_E x \rho(x,y,z) \, dV \]</p>
+                        <p class="text-center">\[ \bar{y} = \frac{1}{M} \iiint_E y \rho(x,y,z) \, dV \]</p>
+                        <p class="text-center">\[ \bar{z} = \frac{1}{M} \iiint_E z \rho(x,y,z) \, dV \]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card aplicacion-card">
+                    <div class="card-body">
+                        <h3><i class="fas fa-cogs text-danger me-2"></i>Otras Aplicaciones</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Momentos de inercia</li>
+                            <li class="list-group-item">Carga eléctrica total</li>
+                            <li class="list-group-item">Flujo de fluidos</li>
+                            <li class="list-group-item">Probabilidades en 3D</li>
+                            <li class="list-group-item">Campos gravitacionales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-danger">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Triples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

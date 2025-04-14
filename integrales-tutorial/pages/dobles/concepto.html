@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto de Integrales Dobles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero-concepto {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
+        .card-concept {
+            border-left: 5px solid #3498db;
+            transition: all 0.3s;
+        }
+        .card-concept:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Dobles</a></li>
+                <li class="breadcrumb-item active">Concepto Básico</li>
+            </ol>
+        </nav>
+
+        <div class="hero-concepto text-white p-5 mb-5 rounded-3">
+            <h1 class="display-4 fw-bold"><i class="fas fa-shapes me-3"></i>Concepto de Integrales Dobles</h1>
+            <p class="lead">Interpretación geométrica y fundamentos teóricos</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card card-concept mb-4">
+                    <div class="card-body">
+                        <h2><i class="fas fa-cube text-primary me-2"></i>Interpretación Geométrica</h2>
+                        <p>La integral doble de una función \( f(x,y) \) sobre una región \( R \) representa el volumen bajo la superficie \( z = f(x,y) \) y sobre la región \( R \) en el plano xy.</p>
+                        <div class="text-center my-4">
+                            <img src="https://via.placeholder.com/600x300?text=Gráfico+Volumen+Integral+Doble" alt="Interpretación geométrica" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-concept mb-4">
+                    <div class="card-body">
+                        <h2><i class="fas fa-calculator text-primary me-2"></i>Definición Formal</h2>
+                        <p>La integral doble se define como el límite de las sumas de Riemann:</p>
+                        <p class="text-center">\[ \iint_R f(x,y) \, dA = \lim_{\Delta A \to 0} \sum_{i=1}^n \sum_{j=1}^m f(x_i^*, y_j^*) \Delta A \]</p>
+                        <p>Donde \( \Delta A \) representa el área de pequeños rectángulos que dividen la región \( R \).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card card-concept">
+                    <div class="card-body">
+                        <h3><i class="fas fa-lightbulb text-primary me-2"></i>Propiedades</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Linealidad</li>
+                            <li class="list-group-item">Aditividad en regiones</li>
+                            <li class="list-group-item">Comparación</li>
+                            <li class="list-group-item">Valor medio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Dobles
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

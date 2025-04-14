@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrales Dobles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .dimension-card {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            height: 100%;
+            border-left: 5px solid;
+        }
+        .dimension-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+        }
+        .card-concepto { border-color: #3498db; }
+        .card-iteradas { border-color: #2ecc71; }
+        .card-orden { border-color: #9b59b6; }
+        .card-polares { border-color: #e74c3c; }
+        .card-cambio { border-color: #f39c12; }
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: inherit;
+        }
+        .hero-double {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+        }
+        .badge-level {
+            font-size: 0.75rem;
+            padding: 0.35em 0.65em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="hero-double text-white p-5 mb-5 rounded-3">
+            <h1 class="display-4 fw-bold"><i class="fas fa-chart-area me-3"></i>Integrales Dobles</h1>
+            <p class="lead">Extendiendo el cálculo integral a funciones de dos variables</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card card-concepto h-100">
+                    <div class="card-body">
+                        <i class="fas fa-shapes card-icon"></i>
+                        <h3 class="card-title">Concepto Básico</h3>
+                        <p class="card-text">Fundamentos teóricos e interpretación geométrica de las integrales dobles.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="concepto.html" class="btn btn-sm btn-outline-primary">Explorar</a>
+                            <span class="badge bg-primary badge-level">Fundamentos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card card-iteradas h-100">
+                    <div class="card-body">
+                        <i class="fas fa-layer-group card-icon"></i>
+                        <h3 class="card-title">Integrales Iteradas</h3>
+                        <p class="card-text">Método de integración sucesiva para regiones rectangulares.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="iteradas.html" class="btn btn-sm btn-outline-success">Explorar</a>
+                            <span class="badge bg-success badge-level">Básico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card card-orden h-100">
+                    <div class="card-body">
+                        <i class="fas fa-sort-amount-down card-icon"></i>
+                        <h3 class="card-title">Orden de Integración</h3>
+                        <p class="card-text">Técnicas para cambiar el orden de integración y simplificar cálculos.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="orden-integracion.html" class="btn btn-sm btn-outline-purple">Explorar</a>
+                            <span class="badge bg-purple badge-level">Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card card-polares h-100">
+                    <div class="card-body">
+                        <i class="fas fa-bullseye card-icon"></i>
+                        <h3 class="card-title">Coordenadas Polares</h3>
+                        <p class="card-text">Transformación a polares para regiones con simetría circular.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="polares.html" class="btn btn-sm btn-outline-danger">Explorar</a>
+                            <span class="badge bg-danger badge-level">Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card card-cambio h-100">
+                    <div class="card-body">
+                        <i class="fas fa-retweet card-icon"></i>
+                        <h3 class="card-title">Cambio de Variables</h3>
+                        <p class="card-text">Método general para transformaciones de coordenadas.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="cambio-variables.html" class="btn btn-sm btn-outline-warning">Explorar</a>
+                            <span class="badge bg-warning badge-level">Avanzado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card dimension-card h-100" style="border-left-color: #1abc9c;">
+                    <div class="card-body">
+                        <i class="fas fa-book card-icon" style="color: #1abc9c;"></i>
+                        <h3 class="card-title">Ejercicios Resueltos</h3>
+                        <p class="card-text">Colección de problemas resueltos paso a paso.</p>
+                        <div class="mt-4 d-flex justify-content-between align-items-center">
+                            <a href="ejercicios.html" class="btn btn-sm btn-outline-teal">Practicar</a>
+                            <span class="badge bg-teal badge-level">Todos los niveles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/integrales-tutorial/index.html" class="btn btn-secondary btn-lg px-4">
+                <i class="fas fa-arrow-left me-2"></i>Volver al Inicio
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

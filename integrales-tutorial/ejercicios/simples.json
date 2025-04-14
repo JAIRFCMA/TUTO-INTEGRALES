@@ -1,0 +1,13 @@
+[
+    {
+      "titulo": "Integral de x^2",
+      "enunciado": "∫ x² dx",
+      "solucion": "x³/3 + C"
+    },
+    {
+      "titulo": "Integral inmediata",
+      "enunciado": "∫ e^x dx",
+      "solucion": "e^x + C"
+    }
+  ]
+  

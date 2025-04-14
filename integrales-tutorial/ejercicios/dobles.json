@@ -1,0 +1,13 @@
+[
+    {
+      "titulo": "Área de una región rectangular",
+      "enunciado": "∬_R 1 dA, donde R es el rectángulo [0,2] x [0,3]",
+      "solucion": "6"
+    },
+    {
+      "titulo": "Integral doble de x + y",
+      "enunciado": "∬_R (x + y) dA, donde R es [0,1] x [0,1]",
+      "solucion": "1"
+    }
+  ]
+  

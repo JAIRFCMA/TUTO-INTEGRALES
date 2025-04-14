@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrales Trigonométricas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .trig-card {
+            border-left: 4px solid #9b59b6;
+            transition: all 0.3s;
+        }
+        .trig-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .case-card {
+            background-color: #f5eef8;
+            border-radius: 8px;
+        }
+        .identity-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Simples</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Trigonométricas</li>
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-purple text-white p-4 p-md-5 rounded-3 mb-4">
+            <h1 class="display-4 fw-bold"><i class="fas fa-project-diagram me-2"></i>Integrales Trigonométricas</h1>
+            <p class="lead">Técnicas especiales para integrar productos de funciones trigonométricas</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-table text-purple me-2"></i>Casos Principales</h2>
+                        
+                        <div class="identity-box mb-4">
+                            <h5 class="text-primary"><i class="fas fa-info-circle me-2"></i>Identidades útiles:</h5>
+                            <ul class="list-unstyled">
+                                <li>\( \sin^2 x + \cos^2 x = 1 \)</li>
+                                <li>\( 1 + \tan^2 x = \sec^2 x \)</li>
+                                <li>\( \sin^2 x = \frac{1 - \cos 2x}{2} \)</li>
+                                <li>\( \cos^2 x = \frac{1 + \cos 2x}{2} \)</li>
+                                <li>\( \sin x \cos x = \frac{\sin 2x}{2} \)</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 class="mt-4"><i class="fas fa-cogs text-info me-2"></i>Estrategias por Caso</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">\( \int \sin^n x \cos^m x \, dx \)</h5>
+                                        <p>Si n es impar: guardar un seno y convertir el resto a cosenos</p>
+                                        <p>Si m es impar: guardar un coseno y convertir el resto a senos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">\( \int \tan^n x \sec^m x \, dx \)</h5>
+                                        <p>Si m es par: guardar \( \sec^2 x \) y convertir el resto a tangentes</p>
+                                        <p>Si n es impar: guardar \( \sec x \tan x \) y convertir el resto a secantes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Productos con diferentes ángulos</h5>
+                                        <p>Usar identidades de producto a suma:</p>
+                                        <p>\( \sin A \cos B = \frac{1}{2}[\sin(A+B) + \sin(A-B)] \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card case-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Potencias pares de seno o coseno</h5>
+                                        <p>Usar identidades de ángulo doble para reducir la potencia:</p>
+                                        <p>\( \sin^2 x = \frac{1 - \cos 2x}{2} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-warning me-2"></i>Ejemplos Resueltos</h2>
+                        
+                        <div class="card case-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">\( \int \sin^3 x \cos^2 x \, dx \)</h5>
+                                <p>1. Separamos \( \sin^3 x = \sin^2 x \cdot \sin x \)</p>
+                                <p>2. Convertimos \( \sin^2 x = 1 - \cos^2 x \)</p>
+                                <p>3. Sustituimos y hacemos \( u = \cos x \):</p>
+                                <p>\( \int (1 - u^2) u^2 (-du) = \frac{u^5}{5} - \frac{u^3}{3} + C \)</p>
+                                <p>4. Solución: \( \frac{\cos^5 x}{5} - \frac{\cos^3 x}{3} + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card case-card">
+                            <div class="card-body">
+                                <h5 class="card-title">\( \int \sec^4 x \, dx \)</h5>
+                                <p>1. Separamos \( \sec^4 x = \sec^2 x \cdot \sec^2 x \)</p>
+                                <p>2. Usamos \( \sec^2 x = 1 + \tan^2 x \)</p>
+                                <p>3. Sustituimos \( u = \tan x \):</p>
+                                <p>\( \int (1 + u^2) du = u + \frac{u^3}{3} + C \)</p>
+                                <p>4. Solución: \( \tan x + \frac{\tan^3 x}{3} + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-success me-2"></i>Consejos Prácticos</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Memoriza las identidades fundamentales</li>
+                            <li class="list-group-item">Identifica si las potencias son pares o impares</li>
+                            <li class="list-group-item">Para tangentes/secantes, recuerda las derivadas</li>
+                            <li class="list-group-item">Considera usar sustitución universal en casos complejos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Errores Comunes</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Aplicar mal las identidades trigonométricas</li>
+                            <li class="list-group-item">No considerar todas las estrategias posibles</li>
+                            <li class="list-group-item">Olvidar el signo menos al derivar coseno</li>
+                            <li class="list-group-item">Confundir las integrales básicas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-primary me-2"></i>Recursos Adicionales</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Tabla de integrales trigonométricas</a>
+                            <a href="#" class="list-group-item list-group-item-action">Video tutorial paso a paso</a>
+                            <a href="#" class="list-group-item list-group-item-action">Problemas desafío</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

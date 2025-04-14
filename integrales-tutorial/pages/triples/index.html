@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrales Triples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .space-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            position: relative;
+            border: none;
+        }
+        .space-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .space-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--card-color), #3498db);
+        }
+        .card-concepto { --card-color: #3498db; }
+        .card-cilindricas { --card-color: #2ecc71; }
+        .card-esfericas { --card-color: #9b59b6; }
+        .card-aplicaciones { --card-color: #e74c3c; }
+        .space-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--card-color), #2980b9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-triple {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-triple::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .hero-triple::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .difficulty-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="hero-triple text-white p-5 mb-5 rounded-3 position-relative">
+            <h1 class="display-4 fw-bold"><i class="fas fa-cubes me-3"></i>Integrales Triples</h1>
+            <p class="lead">Extendiendo el cálculo integral al espacio tridimensional</p>
+            <div class="mt-3">
+                <span class="badge bg-light text-dark me-2"><i class="fas fa-weight-hanging me-1"></i>Volúmenes</span>
+                <span class="badge bg-light text-dark me-2"><i class="fas fa-atom me-1"></i>Física</span>
+                <span class="badge bg-light text-dark"><i class="fas fa-ruler-combined me-1"></i>Geometría</span>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card card-concepto h-100">
+                    <span class="badge bg-primary difficulty-badge">Fundamental</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-shapes space-icon"></i>
+                        <h3 class="card-title">Concepto Básico</h3>
+                        <p class="card-text">Introducción a la integración triple y su interpretación como volumen en el espacio.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="concepto.html" class="btn btn-sm btn-outline-primary stretched-link">Explorar Conceptos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card card-cilindricas h-100">
+                    <span class="badge bg-success difficulty-badge">Intermedio</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-database space-icon"></i>
+                        <h3 class="card-title">Coordenadas Cilíndricas</h3>
+                        <p class="card-text">Transformación a coordenadas cilíndricas para regiones con simetría axial.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="cilindricas.html" class="btn btn-sm btn-outline-success stretched-link">Aprender Transformación</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card card-esfericas h-100">
+                    <span class="badge bg-purple difficulty-badge">Avanzado</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-globe space-icon"></i>
+                        <h3 class="card-title">Coordenadas Esféricas</h3>
+                        <p class="card-text">Sistema esférico para problemas con simetría esférica o radial.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="esfericas.html" class="btn btn-sm btn-outline-purple stretched-link">Estudiar Sistema</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card card-aplicaciones h-100">
+                    <span class="badge bg-danger difficulty-badge">Aplicaciones</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-atom space-icon"></i>
+                        <h3 class="card-title">Aplicaciones Físicas</h3>
+                        <p class="card-text">Cálculo de masas, centros de masa, momentos de inercia y más.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="aplicaciones.html" class="btn btn-sm btn-outline-danger stretched-link">Ver Aplicaciones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card h-100" style="--card-color: #f39c12;">
+                    <span class="badge bg-warning difficulty-badge">Ejercicios</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-laptop-code space-icon"></i>
+                        <h3 class="card-title">Casos Prácticos</h3>
+                        <p class="card-text">Problemas resueltos paso a paso con diferentes niveles de dificultad.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="casos-practicos.html" class="btn btn-sm btn-outline-warning stretched-link">Practicar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="card space-card h-100" style="--card-color: #1abc9c;">
+                    <span class="badge bg-teal difficulty-badge">Extra</span>
+                    <div class="card-body p-4">
+                        <i class="fas fa-chart-line space-icon"></i>
+                        <h3 class="card-title">Visualizaciones 3D</h3>
+                        <p class="card-text">Representaciones gráficas de regiones de integración en el espacio.</p>
+                        <div class="mt-4 pt-2 border-top">
+                            <a href="visualizaciones.html" class="btn btn-sm btn-outline-teal stretched-link">Ver Gráficos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5 pt-3">
+            <a href="/integrales-tutorial/index.html" class="btn btn-secondary btn-lg px-4 py-2">
+                <i class="fas fa-arrow-circle-left me-2"></i>Volver al Menú Principal
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

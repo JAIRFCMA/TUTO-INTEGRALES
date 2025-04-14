@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orden de Integración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-orden {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+        .card-orden {
+            border-left: 5px solid #9b59b6;
+            transition: all 0.3s;
+        }
+        .card-orden:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Dobles</a></li>
+                <li class="breadcrumb-item active">Orden de Integración</li>
+            </ol>
+        </nav>
+
+        <div class="hero-orden text-white p-5 mb-5 rounded-3">
+            <h1 class="display-4 fw-bold"><i class="fas fa-sort-amount-down me-3"></i>Orden de Integración</h1>
+            <p class="lead">Cambiando el orden para simplificar cálculos</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card card-orden mb-4">
+                    <div class="card-body">
+                        <h2><i class="fas fa-exchange-alt text-purple me-2"></i>Cambio de Orden</h2>
+                        <p>Para regiones generales, podemos cambiar el orden de integración ajustando los límites:</p>
+                        <p>\[ \int_{a}^{b} \int_{g_1(x)}^{g_2(x)} f(x,y) \, dy \, dx = \int_{c}^{d} \int_{h_1(y)}^{h_2(y)} f(x,y) \, dx \, dy \]</p>
+                        <p>Es crucial describir correctamente la región en ambos órdenes.</p>
+                    </div>
+                </div>
+
+                <div class="card card-orden">
+                    <div class="card-body">
+                        <h2><i class="fas fa-chart-area text-purple me-2"></i>Ejemplo Gráfico</h2>
+                        <p>Consideremos la región limitada por \( y = x^2 \) y \( y = x \):</p>
+                        <div class="text-center my-4">
+                            <img src="https://via.placeholder.com/600x300?text=Gráfico+Región+Integración" alt="Región de integración" class="img-fluid rounded">
+                        </div>
+                        <p>Se puede integrar primero en x o en y, pero los límites cambian.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card card-orden">
+                    <div class="card-body">
+                        <h3><i class="fas fa-question-circle text-purple me-2"></i>¿Cuándo cambiar?</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cuando la integral es difícil en un orden</li>
+                            <li class="list-group-item">Para evitar integrales impropias</li>
+                            <li class="list-group-item">Cuando los límites son más simples</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary" style="background-color: #9b59b6; border-color: #9b59b6;">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Dobles
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

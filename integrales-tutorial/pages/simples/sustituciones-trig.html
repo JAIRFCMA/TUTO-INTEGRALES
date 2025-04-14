@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustituciones Trigonométricas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .trig-card {
+            border-left: 4px solid #e74c3c;
+            transition: all 0.3s;
+        }
+        .trig-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .case-card {
+            background-color: #fdedec;
+            border-radius: 8px;
+        }
+        .formula-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .triangle-img {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Simples</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sust. Trigonométricas</li>
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-danger text-white p-4 p-md-5 rounded-3 mb-4">
+            <h1 class="display-4 fw-bold"><i class="fas fa-project-diagram me-2"></i>Sustituciones Trigonométricas</h1>
+            <p class="lead">Método especial para integrales con expresiones cuadráticas</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-table text-danger me-2"></i>Casos Principales</h2>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Expresión</th>
+                                        <th>Sustitución</th>
+                                        <th>Identidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>\( \sqrt{a^2 - x^2} \)</td>
+                                        <td>\( x = a \sin \theta \)</td>
+                                        <td>\( 1 - \sin^2 \theta = \cos^2 \theta \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \sqrt{a^2 + x^2} \)</td>
+                                        <td>\( x = a \tan \theta \)</td>
+                                        <td>\( 1 + \tan^2 \theta = \sec^2 \theta \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \sqrt{x^2 - a^2} \)</td>
+                                        <td>\( x = a \sec \theta \)</td>
+                                        <td>\( \sec^2 \theta - 1 = \tan^2 \theta \)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-warning me-2"></i>Ejemplo Resuelto</h2>
+                        
+                        <div class="card case-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">\( \int \frac{dx}{\sqrt{9 - x^2}} \)</h5>
+                                <p>1. Identificamos \( a = 3 \), usamos \( x = 3\sin\theta \)</p>
+                                <p>2. \( dx = 3\cos\theta d\theta \)</p>
+                                <p>3. Sustituimos: \( \int \frac{3\cos\theta}{3\cos\theta} d\theta = \int d\theta = \theta + C \)</p>
+                                <p>4. Volvemos a x: \( \theta = \arcsin(x/3) \), solución: \( \arcsin(x/3) + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card case-card">
+                            <div class="card-body">
+                                <h5 class="card-title">\( \int \frac{dx}{x^2\sqrt{x^2 + 4}} \)</h5>
+                                <p>1. Identificamos \( a = 2 \), usamos \( x = 2\tan\theta \)</p>
+                                <p>2. \( dx = 2\sec^2\theta d\theta \)</p>
+                                <p>3. Sustituimos y simplificamos usando identidades</p>
+                                <p>4. Solución final: \( -\frac{\sqrt{x^2 + 4}}{4x} + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-draw-polygon text-info me-2"></i>Triángulos de Referencia</h3>
+                        <p>Para volver a la variable original, dibuja triángulos basados en la sustitución:</p>
+                        
+                        <div class="text-center mb-3">
+                            <img src="../assets/triangulo-trig.png" alt="Triángulos de referencia" class="triangle-img">
+                            <small class="text-muted">Triángulos para cada caso de sustitución</small>
+                        </div>
+                        
+                        <p>Ejemplo para \( x = 3\tan\theta \):</p>
+                        <p>Opuesto = \( x \), Adyacente = 3, Hipotenusa = \( \sqrt{x^2 + 9} \)</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-success me-2"></i>Consejos Prácticos</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Identifica correctamente \( a \) en la expresión</li>
+                            <li class="list-group-item">Dibuja siempre el triángulo de referencia</li>
+                            <li class="list-group-item">Recuerda los límites de las funciones trigonométricas inversas</li>
+                            <li class="list-group-item">Practica las identidades trigonométricas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card trig-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-primary me-2"></i>Recursos Adicionales</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Video explicativo</a>
+                            <a href="#" class="list-group-item list-group-item-action">Problemas resueltos</a>
+                            <a href="#" class="list-group-item list-group-item-action">Calculadora paso a paso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

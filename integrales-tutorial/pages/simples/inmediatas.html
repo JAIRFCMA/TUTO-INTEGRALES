@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrales Inmediatas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .formula-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 0 8px 8px 0;
+        }
+        .example-card {
+            background-color: #e9f7fe;
+            border-left: 4px solid #2ecc71;
+            border-radius: 0 8px 8px 0;
+        }
+        .method-card {
+            transition: all 0.3s;
+        }
+        .method-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-primary text-white p-4 p-md-5 rounded-3 mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold"><i class="fas fa-bolt me-2"></i>Integrales Inmediatas</h1>
+                    <p class="lead">Las integrales más básicas que se resuelven directamente aplicando fórmulas fundamentales</p>
+                </div>
+                <div class="col-md-4 d-none d-md-block">
+                    <img src="../assets/integral-simple.png" alt="Integral inmediata" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-list-ol text-primary me-2"></i>Tabla de Integrales Básicas</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Función</th>
+                                        <th>Integral</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>\( \int k \, dx \)</td>
+                                        <td>\( kx + C \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \int x^n \, dx \)</td>
+                                        <td>\( \frac{x^{n+1}}{n+1} + C \) (n ≠ -1)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \int \frac{1}{x} \, dx \)</td>
+                                        <td>\( \ln|x| + C \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \int e^x \, dx \)</td>
+                                        <td>\( e^x + C \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \int \sin x \, dx \)</td>
+                                        <td>\( -\cos x + C \)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>\( \int \cos x \, dx \)</td>
+                                        <td>\( \sin x + C \)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-warning me-2"></i>Ejemplos Resueltos</h2>
+                        
+                        <div class="card example-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 1</h5>
+                                <p>\( \int 3x^2 \, dx = 3 \cdot \frac{x^{3}}{3} + C = x^3 + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card example-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 2</h5>
+                                <p>\( \int (2x + 5) \, dx = 2 \cdot \frac{x^2}{2} + 5x + C = x^2 + 5x + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card example-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 3</h5>
+                                <p>\( \int \left( \frac{1}{x^2} + e^x \right) \, dx = \int x^{-2} \, dx + \int e^x \, dx = \frac{x^{-1}}{-1} + e^x + C = -\frac{1}{x} + e^x + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-question-circle text-info me-2"></i>¿Qué son?</h3>
+                        <p>Las integrales inmediatas son aquellas que pueden resolverse directamente aplicando las fórmulas básicas de integración sin necesidad de realizar transformaciones o cambios de variable.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-success me-2"></i>Consejos</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. Identifica si la integral coincide exactamente con una fórmula básica</li>
+                            <li class="list-group-item">2. Aplica propiedades de linealidad para separar términos</li>
+                            <li class="list-group-item">3. Verifica tu resultado derivando</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card method-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-purple me-2"></i>Recursos Adicionales</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Video tutorial</a>
+                            <a href="#" class="list-group-item list-group-item-action">Ejercicios propuestos</a>
+                            <a href="#" class="list-group-item list-group-item-action">Calculadora de integrales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

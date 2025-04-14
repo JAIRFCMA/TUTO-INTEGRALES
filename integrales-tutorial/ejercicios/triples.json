@@ -1,0 +1,13 @@
+[
+    {
+      "titulo": "Volumen de un cubo",
+      "enunciado": "∭_B 1 dV, donde B es el cubo [0,1] x [0,1] x [0,1]",
+      "solucion": "1"
+    },
+    {
+      "titulo": "Integral triple de x y z",
+      "enunciado": "∭_B (x y z) dV, donde B es [0,1] x [0,1] x [0,1]",
+      "solucion": "1/8"
+    }
+  ]
+  

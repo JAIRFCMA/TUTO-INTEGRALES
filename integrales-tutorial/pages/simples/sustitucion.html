@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustitución Simple</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .substitution-card {
+            border-left: 4px solid #2ecc71;
+            transition: all 0.3s;
+        }
+        .substitution-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .example-card {
+            background-color: #e8f8f5;
+            border-radius: 8px;
+        }
+        .formula-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Integrales Simples</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sustitución Simple</li>
+            </ol>
+        </nav>
+
+        <div class="hero-section bg-success text-white p-4 p-md-5 rounded-3 mb-4">
+            <h1 class="display-4 fw-bold"><i class="fas fa-exchange-alt me-2"></i>Método de Sustitución</h1>
+            <p class="lead">Técnica de cambio de variable para simplificar integrales</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card mb-4 substitution-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-random text-success me-2"></i>Fórmula de Sustitución</h2>
+                        
+                        <div class="formula-box mb-4">
+                            <p class="display-6 text-center">\[ \int f(g(x)) \cdot g'(x) \, dx = \int f(u) \, du \]</p>
+                            <p class="text-center">donde \( u = g(x) \) y \( du = g'(x)dx \)</p>
+                        </div>
+                        
+                        <h3 class="mt-4"><i class="fas fa-list-ol text-primary me-2"></i>Pasos del Método</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1. Identificar la sustitución</h5>
+                                        <p>Elegir una parte de la integral como \( u \) (generalmente lo que está "dentro" de una función compuesta)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2. Calcular du</h5>
+                                        <p>Derivar \( u \) respecto a \( x \) y despejar \( dx \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">3. Realizar el cambio</h5>
+                                        <p>Sustituir todas las expresiones en \( x \) por expresiones en \( u \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">4. Integrar y volver a x</h5>
+                                        <p>Resolver la integral en \( u \) y luego sustituir de vuelta a \( x \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 substitution-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-lightbulb text-warning me-2"></i>Ejemplos Resueltos</h2>
+                        
+                        <div class="card example-card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 1: \( \int 2x \cos(x^2) \, dx \)</h5>
+                                <p>1. Elegimos \( u = x^2 \) ⇒ \( du = 2x dx \)</p>
+                                <p>2. La integral se convierte en \( \int \cos u \, du = \sin u + C \)</p>
+                                <p>3. Volvemos a \( x \): \( \sin(x^2) + C \)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card example-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejemplo 2: \( \int \frac{(\ln x)^2}{x} \, dx \)</h5>
+                                <p>1. Elegimos \( u = \ln x \) ⇒ \( du = \frac{1}{x} dx \)</p>
+                                <p>2. La integral se convierte en \( \int u^2 \, du = \frac{u^3}{3} + C \)</p>
+                                <p>3. Volvemos a \( x \): \( \frac{(\ln x)^3}{3} + C \)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4 substitution-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-tips text-info me-2"></i>Consejos para Elegir u</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">La parte "interna" de una función compuesta</li>
+                            <li class="list-group-item">Expresiones elevadas a una potencia</li>
+                            <li class="list-group-item">Denominadores complicados</li>
+                            <li class="list-group-item">Expresiones dentro de raíces</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 substitution-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Errores Comunes</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">No cambiar todos los términos a \( u \)</li>
+                            <li class="list-group-item">Olvidar cambiar \( dx \) por \( du \)</li>
+                            <li class="list-group-item">No volver a la variable original</li>
+                            <li class="list-group-item">Elegir una sustitución que no simplifica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card substitution-card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="fas fa-book text-primary me-2"></i>Recursos Adicionales</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Video tutorial</a>
+                            <a href="#" class="list-group-item list-group-item-action">Ejercicios propuestos</a>
+                            <a href="#" class="list-group-item list-group-item-action">Problemas desafío</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Integrales Simples
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3
